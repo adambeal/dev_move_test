@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <pageHeader>Public/ETHRAPublic.png</pageHeader>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#B1BAC1</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>adam.s.beal@gmail.com</emailSenderAddress>
+    <emailSenderName>ETHRA</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableSiteAsContainer>false</enableSiteAsContainer>
+    <enableTopicAssignmentRules>false</enableTopicAssignmentRules>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <profile>Admin</profile>
+        <profile>Customer Portal Manager Standard</profile>
+        <profile>Customer Community Login User</profile>
+        <profile>Customer Portal Manager Custom</profile>
+        <profile>Customer Community User</profile>
+        <profile>Partner Community User</profile>
+        <profile>Partner Community Login User</profile>
+        <profile>Cross Org Data Proxy User</profile>
+        <profile>Standard</profile>
+        <profile>StandardAul</profile>
+        <profile>Force%2Ecom - Free User</profile>
+        <profile>SolutionManager</profile>
+        <profile>ReadOnly</profile>
+        <profile>Custom%3A Sales Profile</profile>
+        <profile>Custom%3A Marketing Profile</profile>
+        <profile>Custom%3A Support Profile</profile>
+        <profile>MarketingProfile</profile>
+        <profile>ContractManager</profile>
+        <profile>ETHRA Portal Manager</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Standard</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Standard</homePageOverrideSetting>
+        <loginPageOverrideSetting>Standard</loginPageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>ETHRA1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>ETHRA</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>Case</defaultTab>
+        <standardTab>Case</standardTab>
+    </tabs>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

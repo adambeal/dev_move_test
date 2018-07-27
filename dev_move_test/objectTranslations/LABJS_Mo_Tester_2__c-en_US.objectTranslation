@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Mo Tester 2</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Mo Tester 2s</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Mo Tester 2s --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- MT2 Checkbox 1 --></label>
+        <name>MT2_Checkbox_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Currency 1 --></label>
+        <name>MT2_Currency_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Date 1 --></label>
+        <name>MT2_Date_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Datetime 1 --></label>
+        <name>MT2_Datetime_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Email 1 --></label>
+        <name>MT2_Email_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Geolocation 1 --></label>
+        <name>MT2_Geolocation_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Multi Select 1 --></label>
+        <name>MT2_Multi_Select_1__c</name>
+        <picklistValues>
+            <masterLabel>MT2 MS1 Four</masterLabel>
+            <translation><!-- MT2 MS1 Four --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT2 MS1 One</masterLabel>
+            <translation><!-- MT2 MS1 One --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT2 MS1 Three</masterLabel>
+            <translation><!-- MT2 MS1 Three --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT2 MS1 Two</masterLabel>
+            <translation><!-- MT2 MS1 Two --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MT2 Number 1 --></label>
+        <name>MT2_Number_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Percent 1 --></label>
+        <name>MT2_Percent_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Phone 1 --></label>
+        <name>MT2_Phone_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Picklist 1 --></label>
+        <name>MT2_Picklist_1__c</name>
+        <picklistValues>
+            <masterLabel>MT2 P1 Four</masterLabel>
+            <translation><!-- MT2 P1 Four --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT2 P1 One</masterLabel>
+            <translation><!-- MT2 P1 One --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT2 P1 Three</masterLabel>
+            <translation><!-- MT2 P1 Three --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT2 P1 Two</masterLabel>
+            <translation><!-- MT2 P1 Two --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MT2 Text 1 --></label>
+        <name>MT2_Text_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Text Area Long 1 --></label>
+        <name>MT2_Text_Area_Long_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Text Area Rich 1 --></label>
+        <name>MT2_Text_Area_Rich_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Text Encrypted 1 --></label>
+        <name>MT2_Text_Encrypted_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 Textarea 1 --></label>
+        <name>MT2_Textarea_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MT2 URL 1 --></label>
+        <name>MT2_URL_1__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

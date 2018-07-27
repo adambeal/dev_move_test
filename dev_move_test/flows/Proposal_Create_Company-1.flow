@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Proposal Create Company {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Proposal Create Company</label>
+    <processType>Flow</processType>
+    <screens>
+        <name>Create_Company</name>
+        <label>Create Company</label>
+        <locationX>215</locationX>
+        <locationY>103</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Company_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Company Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+    </screens>
+</Flow>

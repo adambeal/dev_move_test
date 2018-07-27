@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>License Users</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>License Users</value>
+    </caseValues>
+    <fields>
+        <help><!-- Field populated by workflow for allowing lookup filter on contact selection --></help>
+        <label><!-- AccountID --></label>
+        <name>AccountID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- License Users --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Date this seat expires --></help>
+        <label><!-- Expiration Date --></label>
+        <name>Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- License --></label>
+        <name>License__c</name>
+        <relationshipLabel><!-- License Users --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- What is the current status of this users seat license --></help>
+        <label><!-- Seat Status --></label>
+        <name>Seat_Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial</masterLabel>
+            <translation><!-- Trial --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- UniqueLicenseUserKey --></label>
+        <name>UniqueLicenseUserKey__c</name>
+    </fields>
+    <layouts>
+        <layout>License Users Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Contact chosen for this license must be a contact under the license&apos;s account --></errorMessage>
+        <name>Contact_Matches_Account_Validation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Add_New_Licensed_User --></label>
+        <name>Add_New_Licensed_User</name>
+    </webLinks>
+</CustomObjectTranslation>

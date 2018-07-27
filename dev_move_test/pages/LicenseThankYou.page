@@ -1,0 +1,12 @@
+<apex:page showHeader="false" sidebar="false" >
+  <apex:form >
+      <br/><br/>
+      <div style="padding:10px;">
+      <h1>Thank you for submitting your license request</h1>
+      <br/><br/>
+      An email with key will be sent to you shortly.
+      <br/><br/><br/>
+      <apex:commandButton value="My Subscriptions"/>
+      </div>
+  </apex:form>
+</apex:page>

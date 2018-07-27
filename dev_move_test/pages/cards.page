@@ -1,0 +1,132 @@
+<apex:page controller="CardController"  sidebar="true">
+<head>
+  <meta charset="utf-8"/>
+  <title>Case Cards</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css"/>
+  <style>
+    .cardSquare {     
+        width: 260px;
+        height: 140px;
+        padding: 0.5em;
+        border: 1px solid black; 
+        float: left; 
+        /*margin: 6px 5px 5px 0;*/
+    }
+    
+    .cardSquareTarget {     
+        width: 260px;
+        height: 140px;
+        padding: 0.5em;
+        border: 1px solid black; 
+        float: left; 
+        font-size: 13px;
+        /*margin: 6px 5px 5px 0;*/
+    }
+    
+    .sectionContainer {     
+        width:70%;
+    }
+    td {width:auto !important;}
+ </style>
+ <script>
+  //jquery script for drag and drop 
+  $(function() {  
+    $( '.cardSquare' ).draggable();
+    $( '.cardSquareTarget' ).droppable({
+      drop: function( event, ui ) { 
+            //call the controller method passing the source card id(ui.draggable.attr('id')) and the target card status (this.id)
+            {!messageString = '123'}
+            CardController.setStatus(ui.draggable.attr('id'),this.id,function(result, event){
+           alert(1);
+           
+            //window.location.href = location.href;
+        }); 
+           
+      } 
+    });rerenderTopPanel();
+  });
+  </script>
+</head>  
+
+<apex:Form >
+<apex:pageBlock Title="Case Cards - Drag and drop or click on case card number to change status">
+  <apex:pageMessages />
+  <apex:pageBlockSection title="Development" collapsible="true" columns="3" id="section1">
+  <apex:actionFunction name="rerenderTopPanel" rerender="TopPanel" />
+  <apex:outputPanel id="TopPanel">
+  TEST
+  {!messageString}
+</apex:outputPanel>
+    <div class="sectionContainer">
+        <!--The droppable target card (development)-->
+        <div class="cardSquareTarget" style="background-color:lightgrey;margin-bottom:30px;" id="Development" >
+            <a href="/500/e?retURL=%2Fapex%2Fcards&RecordType=012d0000000P5fp&ent=Case&cas7=Development">+Add a new card</a><span style="display:block;padding-top:40px;">Drag card here to move to <b>Development</b></span>
+        </div>
+        <!--The draggable (development) case cards built in a repeater-->    
+        <apex:repeat value="{!CasesMap['Development']}" var="listvalue" id="DevelopmentRepeater">
+            <div class="cardSquare" style="background-color:#FEFFEC;border-color:green;border-width:2px;" id="{!listvalue.Id}" >          
+               <a href="/{!listvalue.Id}">{!listvalue.CaseNumber}</a>
+               <br/><b>{!listvalue.Subject}</b>
+               <br/><br/>{!listvalue.Description}<br/><br/>                
+           </div>
+        </apex:repeat>
+     </div>
+  </apex:pageBlockSection>
+    
+  <apex:pageBlockSection title="Testing" collapsible="true" columns="3" id="section2">
+      <div class="sectionContainer">
+        <!--The droppable (testing) target card -->      
+         <div class="cardSquareTarget" style="background-color:lightgrey;margin-bottom:30px;" id="Testing" >
+            <a href="/500/e?retURL=%2Fapex%2Fcards&RecordType=012d0000000P5fp&ent=Case&cas7=Testing">+Add a new card</a><span style="display:block;padding-top:40px;">Drag card here to move to <b>Testing</b></span>
+        </div>
+        <!--The draggable case cards (testing) built in a repeater-->
+         <apex:repeat value="{!CasesMap['Testing']}" var="listvalue">
+            <div class="cardSquare" style="background-color:#FEFFEC;border-color:orange;border-width:2px;" id="{!listvalue.Id}" >
+               <a href="/{!listvalue.Id}">{!listvalue.CaseNumber}</a>
+               <br/><b>{!listvalue.Subject}</b>
+               <br/><br/>{!listvalue.Description}<br/><br/>  
+           </div>
+        </apex:repeat>
+       </div>
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection title="Roadblocked" collapsible="true" columns="3"> 
+      <div class="sectionContainer">
+       <!--The droppable target card (roadblocked)-->
+        <div class="cardSquareTarget" style="background-color:lightgrey;margin-bottom:30px;" id="Roadblocked" >
+            <a href="/500/e?retURL=%2Fapex%2Fcards&RecordType=012d0000000P5fp&ent=Case&cas7=Roadblocked">+Add a new card</a><span style="display:block;padding-top:40px;">Drag card here to move to <b>Roadblocked</b></span>
+        </div>
+        <!--The draggable (roadblocked) case cards built in a repeater-->
+         <apex:repeat value="{!CasesMap['Roadblocked']}" var="listvalue">
+             <div class="cardSquare" style="background-color:#FEFFEC;border-color:red;border-width:2px;" id="{!listvalue.Id}" >
+               <a href="/{!listvalue.Id}">{!listvalue.CaseNumber}</a>
+               <br/><b>{!listvalue.Subject}</b>
+               <br/><br/>{!listvalue.Description}<br/><br/>  
+           </div>
+        </apex:repeat>
+       </div>
+      </apex:pageBlockSection>
+    
+     <apex:pageBlockSection title="Done" collapsible="true" columns="3">
+      <div class="sectionContainer">
+       <!--The droppable target card (done)-->
+        <div class="cardSquareTarget" style="background-color:lightgrey;margin-bottom:30px;" id="Done" >
+            <a href="/500/e?retURL=%2Fapex%2Fcards&RecordType=012d0000000P5fp&ent=Case&cas7=Done">+Add a new card</a><span style="display:block;padding-top:40px;">Drag card here to move to <b>Done</b></span>
+        </div>
+        <!--The draggable (done) case cards built in a repeater-->
+         <apex:repeat value="{!CasesMap['Done']}" var="listvalue">
+             <div class="cardSquare" style="background-color:#FEFFEC;border-color:black;border-width:2px;" id="{!listvalue.Id}" >
+               <a href="/{!listvalue.Id}">{!listvalue.CaseNumber}</a>
+               <br/><b>{!listvalue.Subject}</b>
+               <br/><br/>{!listvalue.Description}<br/><br/>  
+           </div>
+        </apex:repeat>
+       </div>
+     </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:Form>
+<br/>
+</apex:page>

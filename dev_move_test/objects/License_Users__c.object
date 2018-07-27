@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AccountID__c</fullName>
+        <description>Field populated by workflow for allowing lookup filter on contact selection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field populated by workflow for allowing lookup filter on contact selection</inlineHelpText>
+        <label>AccountID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>License Users</relationshipLabel>
+        <relationshipName>License_Users</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Expiration_Date__c</fullName>
+        <defaultValue>Today() + 30</defaultValue>
+        <description>Date this seat expires</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date this seat expires</inlineHelpText>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>License__c</fullName>
+        <externalId>false</externalId>
+        <label>License</label>
+        <referenceTo>License__c</referenceTo>
+        <relationshipLabel>License Users</relationshipLabel>
+        <relationshipName>License_Users</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Seat_Status__c</fullName>
+        <description>What is the current status of this users seat license</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the current status of this users seat license</inlineHelpText>
+        <label>Seat Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Trial</fullName>
+                    <default>false</default>
+                    <label>Trial</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                    <label>Expired</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>UniqueLicenseUserKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Concatenated join values to help preserve unique values in this table</description>
+        <externalId>true</externalId>
+        <label>UniqueLicenseUserKey</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>License Users</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>License_Admin_View</fullName>
+        <columns>AccountID__c</columns>
+        <columns>License__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Seat_Status__c</columns>
+        <columns>Expiration_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>License Admin View</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{0000}</displayFormat>
+        <label>LicenseUserId</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>License Users</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>License__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Seat_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Expiration_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <listViewButtons>Add_New_Licensed_User</listViewButtons>
+        <lookupDialogsAdditionalFields>License__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Seat_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Expiration_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>License__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Seat_Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Expiration_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATED_DATE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>License__c</searchFilterFields>
+        <searchFilterFields>AccountID__c</searchFilterFields>
+        <searchFilterFields>Contact__c</searchFilterFields>
+        <searchFilterFields>Seat_Status__c</searchFilterFields>
+        <searchFilterFields>Expiration_Date__c</searchFilterFields>
+        <searchResultsAdditionalFields>License__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Seat_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Expiration_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>Add_New_Licensed_User</searchResultsCustomButtons>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Contact_Matches_Account_Validation</fullName>
+        <active>true</active>
+        <description>Fires to make sure the contact being added to the license matches the license account</description>
+        <errorConditionFormula>License__r.Account__r.Id  !=  Contact__r.Account.Id</errorConditionFormula>
+        <errorMessage>Contact chosen for this license must be a contact under the license&apos;s account</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Add_New_Licensed_User</fullName>
+        <availability>online</availability>
+        <description>Button to add a new user to a license</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Add New Licensed User</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/flow/Set_License_Flow</url>
+    </webLinks>
+</CustomObject>

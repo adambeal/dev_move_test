@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Represents a license sold to an account containing seats</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>The account this license is tied to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The account this license is tied to (a license can only be applied to a single account)</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Licenses</relationshipLabel>
+        <relationshipName>Licenses</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Active_Seats__c</fullName>
+        <externalId>false</externalId>
+        <label>Active Seats</label>
+        <summaryFilterItems>
+            <field>License_Users__c.Seat_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </summaryFilterItems>
+        <summaryForeignKey>License_Users__c.License__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Available_Seats__c</fullName>
+        <externalId>false</externalId>
+        <formula>Purchased_Seats__c -  Active_Seats__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Available Seats</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expired_Seats__c</fullName>
+        <description>Number of trial seats past the expiration date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of trial seats past the expiration date</inlineHelpText>
+        <label>Expired Seats</label>
+        <summaryFilterItems>
+            <field>License_Users__c.Seat_Status__c</field>
+            <operation>equals</operation>
+            <value>Expired</value>
+        </summaryFilterItems>
+        <summaryForeignKey>License_Users__c.License__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Cost__c</fullName>
+        <defaultValue>10</defaultValue>
+        <description>The base cost per user seat per month</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The base cost per user seat per month</inlineHelpText>
+        <label>Monthly Cost</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Profit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines if the account gets billed at 50% discount rate for the license</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if the account gets billed at 50% discount rate for the license</inlineHelpText>
+        <label>Non Profit</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Purchased_Seats__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>The total number of seats already purchased under the license agreement</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of seats already purchased under the license agreement</inlineHelpText>
+        <label>Purchased Seats</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Monthly_Cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Non_Profit__c , (Monthly_Cost__c *  Purchased_Seats__c) * 0.50, (Monthly_Cost__c *  Purchased_Seats__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Monthly Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Trial_Seats__c</fullName>
+        <description>The number of seat licenses currently in trial</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of seat licenses currently in trial</inlineHelpText>
+        <label>Trial Seats</label>
+        <summaryFilterItems>
+            <field>License_Users__c.Seat_Status__c</field>
+            <operation>equals</operation>
+            <value>Trial</value>
+        </summaryFilterItems>
+        <summaryForeignKey>License_Users__c.License__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <label>License</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>License Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Licenses</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Non_Profit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Purchased_Seats__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Available_Seats__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Active_Seats__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Trial_Seats__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Expired_Seats__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Monthly_Cost__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_Monthly_Cost__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Non_Profit__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Purchased_Seats__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Available_Seats__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Active_Seats__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Trial_Seats__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Expired_Seats__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Monthly_Cost__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total_Monthly_Cost__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Purchased_Seats__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Non_Profit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Purchased_Seats__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Available_Seats__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active_Seats__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Trial_Seats__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Expired_Seats__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Monthly_Cost__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_Monthly_Cost__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

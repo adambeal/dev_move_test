@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Fund</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Funds</value>
+    </caseValues>
+    <fields>
+        <label><!-- Abbreviation --></label>
+        <name>Abbreviation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asset Class --></label>
+        <name>Asset_Class__c</name>
+    </fields>
+    <fields>
+        <label><!-- Five Year Return --></label>
+        <name>Five_Year_Return__c</name>
+    </fields>
+    <fields>
+        <label><!-- One Year Return --></label>
+        <name>One_Year_Return__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rating --></label>
+        <name>Rating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sector --></label>
+        <name>Sector__c</name>
+        <relationshipLabel><!-- Funds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Two Year Return --></label>
+        <name>Two_Year_Return__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Return --></label>
+        <name>YTD_Return__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

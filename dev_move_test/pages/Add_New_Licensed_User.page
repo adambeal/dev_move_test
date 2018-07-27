@@ -1,0 +1,4 @@
+<apex:page >
+        <flow:interview name="Set_License_Flow" finishLocation="{!URLFOR('/a05/o')}" />
+        <p>Test</p>
+</apex:page>

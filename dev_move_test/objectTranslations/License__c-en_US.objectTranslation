@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>License</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Licenses</value>
+    </caseValues>
+    <fields>
+        <help><!-- The account this license is tied to (a license can only be applied to a single account) --></help>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Licenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active Seats --></label>
+        <name>Active_Seats__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available Seats --></label>
+        <name>Available_Seats__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of trial seats past the expiration date --></help>
+        <label><!-- Expired Seats --></label>
+        <name>Expired_Seats__c</name>
+    </fields>
+    <fields>
+        <help><!-- The base cost per user seat per month --></help>
+        <label><!-- Monthly Cost --></label>
+        <name>Monthly_Cost__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines if the account gets billed at 50% discount rate for the license --></help>
+        <label><!-- Non Profit --></label>
+        <name>Non_Profit__c</name>
+    </fields>
+    <fields>
+        <help><!-- The total number of seats already purchased under the license agreement --></help>
+        <label><!-- Purchased Seats --></label>
+        <name>Purchased_Seats__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Monthly Cost --></label>
+        <name>Total_Monthly_Cost__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of seat licenses currently in trial --></help>
+        <label><!-- Trial Seats --></label>
+        <name>Trial_Seats__c</name>
+    </fields>
+    <layouts>
+        <layout>License Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
