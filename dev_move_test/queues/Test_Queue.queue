@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Queue xmlns="http://soap.sforce.com/2006/04/metadata">
     <doesSendEmailToMembers>false</doesSendEmailToMembers>
-    <email>adam.s.beal@gmail.com</email>
-    <name>Test Queue</name>
+    <email>adam.beal@ministrybrands.com</email>
+    <name>JACK FRIDAY Test Queue</name>
     <queueSobject>
         <sobjectType>Case</sobjectType>
     </queueSobject>
